@@ -166,6 +166,9 @@ export function parseSubPath(basePath: string, p: string, rawPath: string = null
 }
 
 export function isValidOrigin(requestOrigin: string, endPointBaseUrl: string, routeType: RouteType): boolean {
+	// isValidOrigin always returns true for LazyCat Joplin server
+	return true;
+
 	const host1 = (new URL(requestOrigin)).host;
 	const host2 = (new URL(endPointBaseUrl)).host;
 
